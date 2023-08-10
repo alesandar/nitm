@@ -24,6 +24,25 @@
 <br>
 
 
+## :bookmark_tabs: Table of contents
+- [Requirements](#octopus-requirements)
+- [Configuration](#gear-configuration)
+- [Certificates](#unlock-certificates)
+- [Setup](#wrench-setup)
+  * [Node.js](#nodejs)
+  * [Docker](#docker)
+  * [Docker Compose](#docker-compose)
+- [ Usage](#rocket-usage)
+  * [cURL](#curl)
+  * [Chromium](#chromium)
+  * [System-wide CA setup](#system-wide-ca-setup)
+- [TODO](#snail-todo)
+- [Flowchart](#arrows_clockwise-flowchart)
+
+
+<br><br>
+
+
 ## :octopus: Requirements
 
 - **Node.js** (required)
@@ -53,7 +72,7 @@ Here is a table that represents all available configuration options.
 
 
 More configuration options will be available soon.<br>
-Feeling lucky with the default settings? Just proceed to the to [certificates](#certificates) section.<br><br>
+Feeling lucky with the default settings? Just proceed to the to [certificates](#unlock-certificates) section.<br><br>
 
 If you would like to update the configuration, the easiest way would be to make a new copy of `env.example`.
 
@@ -112,7 +131,7 @@ docker run -e HTTP_HOST=0.0.0.0 -p 127.0.0.1:8080:8080 -t alesandar/nitm:latest`
 ```
 
 If you do not want to declare environment variable like we did above, just pass the environment file.<br>
-In case you did not create an environment file earlier, please go back to the [setup](#setup) section.
+In case you did not create an environment file earlier, please go back to the [setup](#wrench-setup) section.
 
 ```console
 docker run --env-file .env -p 127.0.0.1:8080:8080 -t alesandar/nitm`

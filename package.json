@@ -1,0 +1,20 @@
+{
+  "name": "nitm",
+  "version": "1.0.0",
+  "description": " A service that intercepts HTTPS traffic. ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "alesandar <publicvoid@tuta.io>",
+  "license": "ISC",
+  "dependencies": {
+    "node-forge": "^1.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [ "http", "https", "mitm", "proxy" ]
+}
+

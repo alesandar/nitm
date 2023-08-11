@@ -120,17 +120,16 @@ npm run dev
 ### Docker
 
 There is a GitHub workflow that automates the processes of building and publishing the image.<br>
-The most recent **Docker** build is located at [alesandar/nitm:latest](https://hub.docker.com/r/alesandar/nitm:latest).<br>
-Looking for other tags? Please take a look at [alesandar/nitm/tags](https://hub.docker.com/repository/docker/alesandar/nitm/tags).<br>
+The most recent image build is located at [alesandar/nitm:latest](https://hub.docker.com/layers/alesandar/nitm/latest/images/sha256-4c9c7aefa939bea284755021ee8c0f77c753fab900e2ca6586d495eec72d9600).
+Looking for other another build? Inspect the public [tags](https://hub.docker.com/repository/docker/alesandar/nitm/tags).<br>
 <br>
-The command below will create a new container based on the latest build.<br>
-If the image is not available locally, then `docker run` will pull it automatically.
+The command below create a new container, based on the latest build.<br>
 
 ```console
 docker run -e HTTP_HOST=0.0.0.0 -p 127.0.0.1:8080:8080 -t alesandar/nitm:latest`
 ```
 
-If you do not want to declare environment variable like we did above, just pass the environment file.<br>
+If you do not want to declare variables one by one, like we did above, just pass an environment file.<br>
 In case you did not create an environment file earlier, please go back to the [setup](#wrench-setup) section.
 
 ```console
@@ -145,8 +144,7 @@ docker run --env-file .env -p 127.0.0.1:8080:8080 -t alesandar/nitm`
 docker-compose up
 ```
 
-For local development, you might wish to pass the `--build` argument.<br>
-Instead of pulling the remote image, it will build a local one.
+For local development, you might want to pass the `--build` argument (it will build a local image).
 
 ```console
 docker-compose up --build
